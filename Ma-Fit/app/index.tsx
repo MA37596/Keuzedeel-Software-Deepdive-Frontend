@@ -1,4 +1,8 @@
-``import { Text, View } from "react-native";
+import { Text, View } from "react-native";
+import { useEffect } from "react";
+import { useRouter } from "expo-router";
+
+
 
 export default function Index() {
   return (
@@ -9,7 +13,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>INDEX</Text>
+      <Text></Text>
     </View>
   );
 }
