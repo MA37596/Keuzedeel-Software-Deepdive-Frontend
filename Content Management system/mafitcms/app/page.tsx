@@ -26,7 +26,7 @@ export default function Home() {
         <div className="bg-white rounded-2xl shadow-xl p-8 space-y-6">
           <div className="text-center space-y-2">
             <h1 className="text-3xl font-bold trcaking-tighter">MediaCollege CMS Login</h1>
-            <p className="text-gray-500"> Welkom Terug Voer Je Gegevens In!</p>
+            <p className="text-gray-500"> Welkom Terug, Voer Je Gegevens In!</p>
           </div>
 
     <form className="space-y-4">
@@ -35,7 +35,7 @@ export default function Home() {
     <Input
       id="email"
       type="email"
-      placeholder="voer je e-mail in"
+      placeholder="Voer Je E-Mail In"
       />
       </div>  
     </form>
@@ -58,9 +58,16 @@ export default function Home() {
       </button>
       </div>  
 </div>
-
+    <a href="wachtwoord.tsx" className="text-sm text-primary-600 hover:underline">Wachtwoord Vergeten?</a>
         </div>
       </motion.div>
+
+      
     </div>
+
+
   );
+
+
+
 }
