@@ -47,6 +47,7 @@ export default function Home() {
       id="Wachtwoord"
       type="Wachtwoord"
       value={password} required
+      onChange={(e) => setPassword(e.target.value)}
       placeholder="Wachtwoord"
       />
       <button
