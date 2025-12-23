@@ -4,18 +4,17 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
-import { Eye, EyeOff, Github, Mail } from "lucide-react";
+import { Eye, EyeOff, Github, Mail, Mail as MailIcon } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
-import { supabase } from "@/lib/supabaseClient"; // <-- TOEGEVOEGD
+import { supabase } from "@/lib/supabaseClient"; 
 
 export default function Home() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [loading, setLoading] = useState(false); // <-- TOEGEVOEGD
-  const [errorMsg, setErrorMsg] = useState<string | null>(null); // <-- TOEGEVOEGD
+  const [loading, setLoading] = useState(false); 
+  const [errorMsg, setErrorMsg] = useState<string | null>(null); 
 
-  // <-- TOEGEVOEGD: Supabase login functie
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setErrorMsg(null);
@@ -33,8 +32,7 @@ export default function Home() {
       return;
     }
 
-    // Redirect naar dashboard of iets dergelijks
-    window.location.href = "/dashboard";
+    window.location.href = "/homepage";
     console.log("Ingelogd:", data.user);
   }
 
@@ -56,7 +54,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* <-- GEWIJZIGD: onSubmit={handleSubmit} */}
           <form className="space-y-4" onSubmit={handleSubmit}>
             {/* E-mail */}
             <div className="space-y-2">
@@ -73,7 +70,6 @@ export default function Home() {
               />
             </div>
 
-            {/* Wachtwoord + oog icoon */}
             <div className="space-y-2">
               <label htmlFor="wachtwoord" className="text-sm font-medium">
                 Wachtwoord
@@ -108,11 +104,19 @@ export default function Home() {
               </p>
             )}
 
+            {/* <-- TOEGEVOEGD: Wachtwoord vergeten + Remember */}
             <div className="flex items-center justify-between text-sm">
               <div className="flex items-center gap-2">
                 <Checkbox id="remember" />
                 <label htmlFor="remember">Onthoud mij</label>
               </div>
+              <a 
+                href="/wachtwoord" 
+                className="text-primary-600 hover:underline font-medium flex items-center gap-1"
+              >
+                <MailIcon className="h-3 w-3" />
+                Wachtwoord vergeten?
+              </a>
             </div>
 
             <Button type="submit" className="w-full" disabled={loading}>
