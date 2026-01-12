@@ -46,3 +46,21 @@
     }
   }
 }
+{
+  "expo": {
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#232323",
+          "image": "",
+          "dark": {
+            "image": "",
+            "backgroundColor": "#000000"
+          },
+          "imageWidth": 200
+        }
+      ]
+    ]
+  }
+}
