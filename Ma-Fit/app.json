@@ -53,9 +53,9 @@
         "expo-splash-screen",
         {
           "backgroundColor": "#232323",
-          "image": "",
+          "image": "assets/images/mediacollegesplashscreen.png",
           "dark": {
-            "image": "",
+            "image": "assets/images/mediacollegesplashscreen.png",
             "backgroundColor": "#000000"
           },
           "imageWidth": 200
