@@ -1,7 +1,11 @@
+import { supabase } from "@/lib/supabase";
 import { Ionicons } from "@expo/vector-icons";
 import * as Linking from "expo-linking";
+import { useRouter } from "expo-router";
 import React, { useState } from "react";
 import {
+  ActivityIndicator,
+  Alert,
   KeyboardAvoidingView,
   Modal,
   Platform,
@@ -17,9 +21,35 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [faqVisible, setFaqVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
-  const handleLogin = () => {
-    console.log("Login:", { email, password });
+  const handleLogin = async () => {
+    if (!email || !password) {
+      Alert.alert("Fout", "Vul alstublieft e-mail en wachtwoord in");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email: email.trim(),
+        password: password,
+      });
+
+      if (error) {
+        Alert.alert("Inlogfout", error.message);
+        setLoading(false);
+        return;
+      }
+
+      if (data.user) {
+        router.replace("/homescreen");
+      }
+    } catch (error: any) {
+      Alert.alert("Fout", error.message || "Er is een fout opgetreden");
+      setLoading(false);
+    }
   };
 
   const handleForgotPassword = async () => {
@@ -85,8 +115,16 @@ export default function Login() {
             </TouchableOpacity>
           </View>
 
-          <TouchableOpacity style={styles.button} onPress={handleLogin}>
-            <Text style={styles.buttonText}>Inloggen</Text>
+          <TouchableOpacity
+            style={[styles.button, loading && styles.buttonDisabled]}
+            onPress={handleLogin}
+            disabled={loading}
+          >
+            {loading ? (
+              <ActivityIndicator color="#FFFFFF" />
+            ) : (
+              <Text style={styles.buttonText}>Inloggen</Text>
+            )}
           </TouchableOpacity>
         </View>
       </View>
@@ -245,6 +283,9 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     alignItems: "center",
     marginTop: 8,
+  },
+  buttonDisabled: {
+    opacity: 0.6,
   },
   buttonText: {
     color: "#FFFFFF",
