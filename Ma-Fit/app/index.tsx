@@ -44,7 +44,7 @@ export default function Login() {
       }
 
       if (data.user) {
-        router.replace("/homescreen");
+        router.replace("/welcome");
       }
     } catch (error: any) {
       Alert.alert("Fout", error.message || "Er is een fout opgetreden");
