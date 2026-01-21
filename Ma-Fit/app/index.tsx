@@ -1,4 +1,5 @@
 import { supabase } from "@/lib/supabase";
+import { useTheme } from "@/lib/ThemeContext";
 import { Ionicons } from "@expo/vector-icons";
 import * as Linking from "expo-linking";
 import { useRouter } from "expo-router";
@@ -18,6 +19,7 @@ import {
 } from "react-native";
 
 export default function Login() {
+  const { colors } = useTheme();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [faqVisible, setFaqVisible] = useState(false);
@@ -116,7 +118,7 @@ export default function Login() {
           </View>
 
           <TouchableOpacity
-            style={[styles.button, loading && styles.buttonDisabled]}
+            style={[styles.button, { backgroundColor: colors.primary }, loading && styles.buttonDisabled]}
             onPress={handleLogin}
             disabled={loading}
           >
@@ -278,7 +280,6 @@ const styles = StyleSheet.create({
     borderColor: "#E0E0E0",
   },
   button: {
-    backgroundColor: "#000000",
     borderRadius: 8,
     paddingVertical: 14,
     alignItems: "center",

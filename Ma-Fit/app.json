@@ -9,7 +9,10 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSMotionUsageDescription": "Ma-Fit gebruikt bewegingsgegevens om je stappen en activiteit bij te houden voor de Bewegen-functie."
+      }
     },
     "android": {
       "adaptiveIcon": {
