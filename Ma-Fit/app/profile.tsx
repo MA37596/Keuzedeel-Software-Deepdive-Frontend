@@ -106,6 +106,8 @@ export default function ProfileScreen() {
     } catch {}
   };
 
+
+  // hier wordt wachtwoord gewijzigd, als pw niet gelijk = aan pwconfirm dan Fout", "Nieuw wachtwoord en bevestiging komen niet overeen.""
   const changePassword = async () => {
     if (!pwNew || pwNew.length < 6) {
       Alert.alert("Fout", "Nieuw wachtwoord moet minstens 6 tekens zijn.");
@@ -127,6 +129,8 @@ export default function ProfileScreen() {
     }
   };
 
+
+  // hier 
   const handleLogout = () => {
     Alert.alert("Uitloggen", "Weet je het zeker?", [
       { text: "Annuleren", style: "cancel" },
@@ -144,6 +148,8 @@ export default function ProfileScreen() {
     );
   }
 
+
+  // alles hier onderin is de styling 
   return (
     <ScrollView style={[styles.container, dynamic.container]} contentContainerStyle={styles.content}>
       <View style={styles.avatarSection}>
