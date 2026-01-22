@@ -1,61 +1,1005 @@
 <!DOCTYPE html>
 <html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Primary SEO Meta Tags -->
-    <title>Ma-fit | Mentale Gezondheid App voor Scholieren</title>
-    <meta name="title" content="ma-fit | Mentale Gezondheid App voor Scholieren" />
-    <meta name="description" content="ma-fit helpt scholieren met mentale gezondheid, stress, en schoolgerelateerde uitdagingen. Gratis app met praktische tools en ondersteuning." />
-    <meta name="keywords" content="mentale gezondheid, scholieren, studenten, stress, school, app, ondersteuning, welzijn, jongeren" />
-    <meta name="author" content="ma-fit" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.37596.nl" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.37596.nl" />
-    <meta property="og:title" content="ma-fit | Mentale Gezondheid App voor Scholieren" />
-    <meta property="og:description" content="ma-fit helpt scholieren met mentale gezondheid, stress, en schoolgerelateerde uitdagingen. Gratis app met praktische tools." />
-    <meta property="og:locale" content="nl_NL" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://www.37596.nl" />
-    <meta property="twitter:title" content="ma-fit | Mentale Gezondheid App voor Scholieren" />
-    <meta property="twitter:description" content="ma-fit helpt scholieren met mentale gezondheid, stress, en schoolgerelateerde uitdagingen." />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MobileApplication",
-      "name": "ma-fit",
-      "applicationCategory": "HealthApplication",
-      "operatingSystem": "iOS, Android",
-      "description": "ma-fit helpt scholieren met mentale gezondheid, stress, en schoolgerelateerde uitdagingen.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "EUR"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "1250"
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO title & description -->
+  <title>MA-Fit – Mentale welzijnsapp voor studenten Mediacollege</title>
+  <meta name="description" content="MA-Fit is de mentale welzijnsapp voor studenten van het Mediacollege. Doe korte check-ins, ontdek oefeningen en vind eenvoudig hulp en ondersteuning als het even tegenzit.">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.37596.nl">
+
+  <!-- Open Graph (zonder afbeeldingen) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MA-Fit – Mentale welzijnsapp voor studenten Mediacollege">
+  <meta property="og:description" content="Een rustige plek op je telefoon om stil te staan bij hoe het met je gaat. Speciaal ontwikkeld voor studenten van het Mediacollege.">
+  <meta property="og:url" content="https://www.37596.nl">
+
+  <!-- Twitter Cards (zonder afbeeldingen) -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="MA-Fit – Mentale welzijnsapp voor studenten Mediacollege">
+  <meta name="twitter:description" content="Check eenvoudig in bij jezelf, doe korte oefeningen en zie waar je terecht kunt voor hulp, allemaal in één app.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Structured Data: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MA-Fit",
+    "applicationCategory": "HealthApplication",
+    "applicationSubCategory": "MentalHealthApplication",
+    "operatingSystem": "iOS, Android",
+    "description": "Mentale welzijnsapp voor studenten van het Mediacollege met check-ins, oefeningen en overzicht van hulp en ondersteuning.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #22c55e;
+      --primary-dark: #16a34a;
+      --bg: #020617;
+      --text: #f9fafb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+      backdrop-filter: blur(16px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.85) 40%, transparent);
+    }
+
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      background: conic-gradient(from 210deg, #22c55e, #4ade80, #a3e635, #4ade80, #22c55e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow:
+        0 0 0 1px rgba(15, 23, 42, 0.7),
+        0 18px 40px rgba(34, 197, 94, 0.45);
+    }
+
+    .logo-mark span {
+      font-weight: 900;
+      font-size: 0.9rem;
+      color: #020617;
+      letter-spacing: 0.04em;
+    }
+
+    .logo-text-main {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .logo-text-sub {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-link {
+      color: var(--muted);
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(to right, var(--primary), var(--accent));
+      transition: width 0.2s ease-out;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1.2rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #0f172a;
+      font-weight: 600;
+      font-size: 0.85rem;
+      box-shadow:
+        0 10px 25px rgba(34, 197, 94, 0.45),
+        0 0 0 1px rgba(15, 23, 42, 0.8);
+      border: none;
+      cursor: pointer;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .hero {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3.5rem 1.25rem 4.5rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.2rem 0.5rem 0.2rem 0.2rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: radial-gradient(circle at left, rgba(34, 197, 94, 0.3), transparent);
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .eyebrow-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.7);
+      font-size: 0.75rem;
+      color: #bbf7d0;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-highlight {
+      display: inline-block;
+      background: linear-gradient(120deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 34rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.9rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #020617;
+      font-weight: 600;
+      font-size: 0.95rem;
+      box-shadow:
+        0 15px 30px rgba(34, 197, 94, 0.45),
+        0 0 0 1px rgba(15, 23, 42, 0.85);
+    }
+
+    .btn-secondary {
+      padding: 0.8rem 1.3rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.85);
+      color: var(--muted);
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-meta strong {
+      color: #e5e7eb;
+    }
+
+    .hero-device {
+      position: relative;
+      max-width: 340px;
+      margin-inline: auto;
+    }
+
+    .hero-glow {
+      position: absolute;
+      inset: 0;
+      translate: 0 18px;
+      filter: blur(32px);
+      opacity: 0.7;
+      background:
+        radial-gradient(circle at top, rgba(56, 189, 248, 0.5), transparent 55%),
+        radial-gradient(circle at bottom, rgba(34, 197, 94, 0.6), transparent 55%);
+      z-index: -1;
+    }
+
+    .phone-frame {
+      position: relative;
+      border-radius: 34px;
+      padding: 10px;
+      background: radial-gradient(circle at 0 0, #f9fafb 0, #e5e7eb 18%, #020617 55%);
+      box-shadow:
+        0 30px 70px rgba(15, 23, 42, 0.9),
+        0 0 0 1px rgba(148, 163, 184, 0.7);
+    }
+
+    .phone-notch {
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40%;
+      height: 18px;
+      border-radius: 999px;
+      background: #020617;
+    }
+
+    .phone-screen {
+      border-radius: 26px;
+      overflow: hidden;
+      background: radial-gradient(circle at top, #0f172a 0, #020617 60%);
+      padding: 1.1rem 1.1rem 1.4rem;
+      color: #e5e7eb;
+      position: relative;
+    }
+
+    .screen-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.9rem;
+      font-size: 0.78rem;
+      color: #9ca3af;
+    }
+
+    .screen-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      font-size: 0.65rem;
+    }
+
+    .screen-hero-text {
+      margin-bottom: 0.9rem;
+    }
+
+    .screen-hero-text h2 {
+      font-size: 1.05rem;
+      line-height: 1.2;
+      margin-bottom: 0.2rem;
+    }
+
+    .screen-hero-text p {
+      font-size: 0.72rem;
+      color: #9ca3af;
+    }
+
+    .screen-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.55rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .screen-card {
+      border-radius: 0.9rem;
+      padding: 0.55rem 0.6rem;
+      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.3), rgba(15, 23, 42, 0.9));
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      font-size: 0.8rem;
+    }
+
+    .screen-card.secondary {
+      background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.3), rgba(15, 23, 42, 0.95));
+      border-color: rgba(59, 130, 246, 0.4);
+    }
+
+    .screen-card span {
+      display: block;
+      font-size: 0.65rem;
+      color: #bbf7d0;
+      margin-bottom: 0.1rem;
+    }
+
+    .screen-card.secondary span {
+      color: #bfdbfe;
+    }
+
+    .screen-progress {
+      border-radius: 0.9rem;
+      padding: 0.55rem 0.6rem;
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(59, 130, 246, 0.2));
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      font-size: 0.75rem;
+    }
+
+    .screen-progress-bar {
+      margin-top: 0.4rem;
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.95);
+      overflow: hidden;
+    }
+
+    .screen-progress-bar-inner {
+      width: 60%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(to right, #22c55e, #a3e635);
+    }
+
+    .screen-footer {
+      margin-top: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      color: #9ca3af;
+    }
+
+    .screen-footer-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .trust-section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.25rem 3rem;
+    }
+
+    .trust-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      border-radius: 1.5rem;
+      padding: 1.5rem 1.7rem;
+      background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.8));
+      border: 1px solid rgba(148, 163, 184, 0.35);
+    }
+
+    .trust-main {
+      flex: 2 1 260px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .trust-main strong {
+      color: #e5e7eb;
+    }
+
+    .trust-badges {
+      flex: 1.4 1 240px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      font-size: 0.8rem;
+    }
+
+    .trust-badge {
+      border-radius: 1rem;
+      padding: 0.8rem 0.9rem;
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid rgba(55, 65, 81, 0.7);
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .trust-badge span {
+      font-size: 0.7rem;
+      color: #9ca3af;
+    }
+
+    .trust-badge strong {
+      font-size: 0.9rem;
+      color: #e5e7eb;
+    }
+
+    section {
+      padding: 0 1.25rem 3.5rem;
+    }
+
+    .section-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    h2.section-title {
+      font-size: 1.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 36rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.7rem;
+    }
+
+    .feature {
+      border-radius: 1.2rem;
+      padding: 1.1rem 1.1rem 1.2rem;
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.85));
+      border: 1px solid rgba(55, 65, 81, 0.7);
+      font-size: 0.9rem;
+    }
+
+    .feature-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      margin-bottom: 0.6rem;
+      background: rgba(34, 197, 94, 0.15);
+    }
+
+    .feature-title {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .feature-text {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-meta {
+      font-size: 0.75rem;
+      color: #9ca3af;
+    }
+
+    .download-section {
+      padding-bottom: 4rem;
+    }
+
+    .download-card {
+      border-radius: 1.5rem;
+      padding: 1.7rem 1.8rem;
+      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.25), rgba(15, 23, 42, 0.95));
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .download-text {
+      flex: 1.6 1 260px;
+      font-size: 0.95rem;
+    }
+
+    .store-buttons {
+      flex: 1 1 220px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+    }
+
+    .store-btn {
+      flex: 1 1 150px;
+      min-width: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.7rem 1rem;
+      border-radius: 0.9rem;
+      border: 1px solid rgba(15, 23, 42, 0.9);
+      background: #020617;
+      color: #e5e7eb;
+      cursor: pointer;
+      font-size: 0.8rem;
+    }
+
+    .store-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 0.7rem;
+      background: radial-gradient(circle at top, #f9fafb, #9ca3af);
+    }
+
+    .store-label span {
+      display: block;
+      font-size: 0.7rem;
+      color: #9ca3af;
+    }
+
+    .store-label strong {
+      font-size: 0.9rem;
+    }
+
+    footer {
+      border-top: 1px solid rgba(55, 65, 81, 0.8);
+      padding: 1.5rem 1.25rem 2rem;
+      font-size: 0.78rem;
+      color: #6b7280;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .seo-visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 960px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        padding-top: 2.5rem;
+      }
+
+      .hero-device {
+        order: -1;
+      }
+
+      header {
+        position: static;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .trust-grid {
+        flex-direction: column;
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+    @media (max-width: 640px) {
+      .hero {
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+      }
+
+      h1 {
+        font-size: 2.1rem;
+      }
+
+      .features-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .download-card {
+        padding: 1.4rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <a href="#main-content" class="seo-visually-hidden">Ga direct naar de inhoud</a>
+
+    <header>
+      <nav class="nav" aria-label="Hoofd navigatie">
+        <div class="logo">
+          <div class="logo-mark" aria-hidden="true">
+            <span>MA</span>
+          </div>
+          <div>
+            <div class="logo-text-main">MA-Fit</div>
+            <div class="logo-text-sub">Mentale welzijnsapp voor studenten</div>
+          </div>
+        </div>
+
+        <div class="nav-links">
+          <a href="#features" class="nav-link">Functionaliteiten</a>
+          <a href="#download" class="nav-link">Download app</a>
+          <a href="#veiligheid" class="nav-link">Privacy & veiligheid</a>
+          <button type="button" class="nav-cta js-scroll-download">
+            <span>Download MA-Fit</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <!-- Hero -->
+      <section aria-labelledby="hero-title">
+        <div class="hero">
+          <div>
+            <p class="eyebrow">
+              <span class="eyebrow-pill">●</span>
+              Nieuw: MA-Fit mentale welzijnsapp voor het Mediacollege
+            </p>
+            <h1 id="hero-title">
+              Zorg goed voor jezelf tijdens je <span class="hero-highlight">opleiding</span>.
+            </h1>
+            <p class="hero-subtitle">
+              MA-Fit geeft studenten van het Mediacollege een rustige plek om even stil te staan bij hoe het gaat. Met korte check-ins, praktische oefeningen en een duidelijk overzicht van waar je terecht kunt voor hulp.
+            </p>
+
+            <div class="hero-cta-group">
+              <button type="button" class="btn-primary js-scroll-download">
+                Download MA-Fit
+              </button>
+              <button type="button" class="btn-secondary js-scroll-features">
+                Bekijk alle functionaliteiten
+              </button>
+            </div>
+
+            <div class="hero-meta">
+              <div><strong>Speciaal voor</strong> studenten Mediacollege</div>
+              <div><strong>Anonieme</strong> check-ins en notities</div>
+              <div><strong>Snelle toegang</strong> tot hulp & support</div>
+            </div>
+          </div>
+
+          <!-- App mockup -->
+          <aside class="hero-device" aria-label="Voorbeeldscherm van de MA-Fit app">
+            <div class="hero-glow" aria-hidden="true"></div>
+            <div class="phone-frame">
+              <div class="phone-notch" aria-hidden="true"></div>
+              <div class="phone-screen">
+                <div class="screen-header">
+                  <span>MA-Fit</span>
+                  <span>Vandaag · 09:15</span>
+                </div>
+
+                <div class="screen-hero-text">
+                  <h2>Hoe voel je je vandaag?</h2>
+                  <p>Neem een minuut om in te checken. Kleine momenten van aandacht kunnen veel verschil maken.</p>
+                </div>
+
+                <div class="screen-grid">
+                  <div class="screen-card">
+                    <span>Check-in</span>
+                    Kies je stemming en voeg, als je wilt, een korte notitie toe.
+                  </div>
+                  <div class="screen-card secondary">
+                    <span>Tips voor nu</span>
+                    Ademhaling · Korte pauze · Iemand appen die je vertrouwt.
+                  </div>
+                </div>
+
+                <div class="screen-progress">
+                  Deze week 3 van 5 zelfzorgmomenten gedaan
+                  <div class="screen-progress-bar">
+                    <div class="screen-progress-bar-inner"></div>
+                  </div>
+                </div>
+
+                <div class="screen-footer">
+                  <div class="screen-footer-pill">
+                    ▶ Start korte oefening
+                  </div>
+                  <span>Je gegevens blijven privé</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Trust / context -->
+      <section class="trust-section" aria-labelledby="trust-title">
+        <div class="trust-grid">
+          <div class="trust-main">
+            <h2 id="trust-title">Ontwikkeld voor studenten van het Mediacollege.</h2>
+            <p>
+              Studeren kan leuk én zwaar zijn. Met MA-Fit houd je op een laagdrempelige manier bij hoe het met je gaat, zodat je eerder kunt herkennen wanneer je extra steun kunt gebruiken en waar je die kunt vinden.
+            </p>
+          </div>
+          <div class="trust-badges" aria-label="Belangrijke kenmerken">
+            <div class="trust-badge">
+              <span>Doelgroep</span>
+              <strong>Studenten Mediacollege</strong>
+            </div>
+            <div class="trust-badge">
+              <span>Focus</span>
+              <strong>Mentale welzijn & veerkracht</strong>
+            </div>
+            <div class="trust-badge">
+              <span>Gebruik</span>
+              <strong>Laagdrempelig & anoniem</strong>
+            </div>
+            <div class="trust-badge">
+              <span>Platformen</span>
+              <strong>iOS & Android</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features" aria-labelledby="features-title">
+        <div class="section-inner">
+          <p class="section-kicker">Functionaliteiten</p>
+          <h2 class="section-title" id="features-title">Alles in één app voor jouw mentale welzijn.</h2>
+          <p class="section-subtitle">
+            MA-Fit is geen vervanging voor hulpverlening, maar een extra hulpmiddel om vaker stil te staan bij hoe het met je gaat en sneller de juiste ondersteuning te vinden als dat nodig is.
+          </p>
+
+          <div class="features-grid" aria-label="Belangrijkste functionaliteiten van MA-Fit">
+            <article class="feature">
+              <div class="feature-icon" aria-hidden="true">📅</div>
+              <h3 class="feature-title">Korte dagelijkse check-ins</h3>
+              <p class="feature-text">
+                Geef met een paar tikken aan hoe je je voelt. Je ziet in één oogopslag hoe jouw week eruitziet.
+              </p>
+              <p class="feature-meta">Geen diagnose, maar inzicht in je eigen patroon.</p>
+            </article>
+
+            <article class="feature">
+              <div class="feature-icon" aria-hidden="true">🧘</div>
+              <h3 class="feature-title">Praktische oefeningen</h3>
+              <p class="feature-text">
+                Ontdek korte ademhalings- en ontspanningsoefeningen die je tussendoor kunt doen, in de klas of thuis.
+              </p>
+              <p class="feature-meta">Specifiek geselecteerd voor studenten.</p>
+            </article>
+
+            <article class="feature">
+              <div class="feature-icon" aria-hidden="true">📍</div>
+              <h3 class="feature-title">Overzicht van hulp</h3>
+              <p class="feature-text">
+                Vind snel de juiste contactpunten binnen het Mediacollege en daarbuiten wanneer je extra steun nodig hebt.
+              </p>
+              <p class="feature-meta">Inclusief nood- en hulplijnen.</p>
+            </article>
+
+            <article class="feature">
+              <div class="feature-icon" aria-hidden="true">🌱</div>
+              <h3 class="feature-title">Gezonde gewoontes</h3>
+              <p class="feature-text">
+                Stel kleine haalbare doelen in, zoals op tijd slapen of een pauze nemen, en vink ze af in je eigen tempo.
+              </p>
+              <p class="feature-meta">Focus op wat voor jou werkt.</p>
+            </article>
+
+            <article class="feature">
+              <div class="feature-icon" aria-hidden="true">🎓</div>
+              <h3 class="feature-title">Gemaakt voor studenten</h3>
+              <p class="feature-text">
+                Alle flows en content zijn afgestemd op de realiteit van een MBO‑opleiding: projecten, deadlines en stage.
+              </p>
+              <p class="feature-meta">Ontwikkeld samen met studenten en begeleiders.</p>
+            </article>
+
+            <article class="feature" id="veiligheid">
+              <div class="feature-icon" aria-hidden="true">🔒</div>
+              <h3 class="feature-title">Privacy & veiligheid</h3>
+              <p class="feature-text">
+                Je check-ins en notities zijn privé. Alleen jij kiest of je iets deelt met een docent, begeleider of iemand anders.
+              </p>
+              <p class="feature-meta">Transparant over welke gegevens worden opgeslagen.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Download -->
+      <section id="download" class="download-section" aria-labelledby="download-title">
+        <div class="section-inner">
+          <h2 class="section-title" id="download-title">Download MA-Fit en geef jezelf wat extra ruimte.</h2>
+          <p class="section-subtitle">
+            De app is gratis voor studenten van het Mediacollege. Installeer MA-Fit, maak een profiel aan en plan je eerste check-in op een moment dat voor jou rustig voelt.
+          </p>
+
+          <div class="download-card">
+            <div class="download-text">
+              <p>
+                MA-Fit vervangt geen hulpverlener of behandeling, maar kan je helpen sneller te zien wanneer het minder goed gaat en waar je terecht kunt voor ondersteuning. Je bepaalt zelf wat je bijhoudt en met wie je dat deelt.
+              </p>
+            </div>
+            <div class="store-buttons" aria-label="Downloadopties">
+              <!-- TODO: vervang deze hrefs met je echte store-links / deep link -->
+              <a class="store-btn" href="https://apps.apple.com" target="_blank" rel="noopener noreferrer">
+                <span class="store-icon" aria-hidden="true"></span>
+                <span class="store-label">
+                  <span>Download op</span>
+                  <strong>App Store</strong>
+                </span>
+              </a>
+
+              <a class="store-btn" href="https://play.google.com" target="_blank" rel="noopener noreferrer">
+                <span class="store-icon" aria-hidden="true"></span>
+                <span class="store-label">
+                  <span>Download op</span>
+                  <strong>Google Play</strong>
+                </span>
+              </a>
+
+              <a class="store-btn" href="mafit://open" aria-label="Open de MA-Fit app via deep link">
+                <span class="store-icon" aria-hidden="true"></span>
+                <span class="store-label">
+                  <span>Al geïnstalleerd?</span>
+                  <strong>Open de app</strong>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>© <span id="year"></span> MA-Fit. Alle rechten voorbehouden.</div>
+        <div class="footer-links">
+          <a href="#features">Functionaliteiten</a>
+          <a href="#veiligheid">Privacy & veiligheid</a>
+          <a href="#download">Download app</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Dynamisch jaar
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function smoothScrollTo(selector) {
+      const el = document.querySelector(selector);
+      if (!el) return;
+      window.scrollTo({
+        top: el.getBoundingClientRect().top + window.scrollY - 80,
+        behavior: 'smooth'
+      });
+    }
+
+    document.querySelectorAll('.js-scroll-download').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        smoothScrollTo('#download');
+      });
+    });
+
+    document.querySelectorAll('.js-scroll-features').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        smoothScrollTo('#features');
+      });
+    });
+  </script>
+</body>
 </html>
