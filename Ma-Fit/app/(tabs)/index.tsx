@@ -323,7 +323,6 @@ export default function HomeTab() {
         <Ionicons name="add" size={28} color="#FFF" />
       </TouchableOpacity>
 
-      {/* POST MODAL MET KEYBOARDAVOIDINGVIEW */}
       <Modal visible={postModal} transparent animationType="slide">
         <KeyboardAvoidingView
           style={styles.modalOverlay}

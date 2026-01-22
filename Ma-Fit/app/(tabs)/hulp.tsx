@@ -183,7 +183,6 @@ export default function HulpTab() {
         </View>
       </View>
 
-      {/* MODAL VOOR PIJLERS DETAILS - CENTRUM SCHERM */}
       <Modal
         visible={!!pillarModal}
         transparent
@@ -278,7 +277,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginBottom: 12,
   },
-  // Modal styles - VOLLEDIG ZICHTBAAR OP SCHERM
   modalOverlayFull: {
     flex: 1,
     backgroundColor: "rgba(0,0,0,0.6)",
